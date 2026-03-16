@@ -1,4 +1,4 @@
-name: Python CI
+name: Python CI Pipeline
 
 on:
   push:
@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
-      - name: Run Python File
+      - name: Run Python Script
         run: python sample.py
